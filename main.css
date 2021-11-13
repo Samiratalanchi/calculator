@@ -1,0 +1,24 @@
+:root {
+    --gray: #474747;
+    --lightgray: #D4D2D5;
+    --final: #E71D36;
+}
+body {
+    background-color: var(--gray);
+}
+#container {
+    margin-left: 5%;
+    margin-top: 5%;
+    width: 90%;
+    height: 95%;
+}
+#textBox {
+    width: 100%;
+    height: 35%;
+    background-color: red;
+}
+#gridContent {
+    width: 100%;
+    height: 65%;
+    background-color: royalblue;
+}
