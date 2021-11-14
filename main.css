@@ -52,15 +52,29 @@ body {
     align-items: center;
     font-size: 6vw;
     color: white;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #777777;
 }
 .buttonZero {
     width: 37vw;
 }
 .top{
     background-color: var(--lightgray);
-    
 }
 .main {
     background-color: var(--final);
     font-size: 8vw;
+}
+.top:hover {
+    background-color: #c7c7c7;
+}
+.main:hover {
+    background-color: #ffbe73;
+}
+.button:active {
+    margin-left: -1px;
+    margin-top: -1px;
+    box-shadow: 3px 3px 7px #353535;
 }
