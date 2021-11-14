@@ -126,3 +126,28 @@ body {
     background-image: url("./static/sub.png");
     background-size: cover;
 }
+#previous {
+    width: 80%;
+    color: rgb(154, 167, 180);
+    font-size: 8vw;
+    position: absolute;
+    margin-top:9vh;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 3%;
+}
+#number {
+    width: 80%;
+    color: white;
+    font-size: 13vw;
+    position: absolute;
+    margin-top:18vh;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    display: flex;
+    justify-content: flex-end;
+}
