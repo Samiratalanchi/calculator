@@ -73,3 +73,13 @@ function negative() {
         }
     }
 }
+
+function dot() {
+    if(value = 0){
+        temp="0.";
+    } else {
+        temp=".";
+    }
+    value += temp;
+    document.getElementById("number").innerText = value;
+}
