@@ -60,7 +60,16 @@ function C() {
 }
 
 function negative() {
-    temp=-1;
-    value *= temp;
-    document.getElementById("number").innerText = value;
+    if(value!=0) {
+        if(value >0) {
+            temp=value
+            value = "-";
+            value += temp;
+            document.getElementById("number").innerText = value;
+        } else {
+            temp = value.slice(1);
+            value = temp;
+            document.getElementById("number").innerText = value;
+        }
+    }
 }
