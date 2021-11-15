@@ -1,6 +1,8 @@
 var value = "";
 var temp = 0
-
+var firstOperand;
+var secondOperand ;
+var operation ="";
 function one() {
     temp=1;
     value += temp;
@@ -60,7 +62,7 @@ function C() {
 }
 
 function negative() {
-    if(value!=0) {
+    if(value!="") {
         if(value >0) {
             temp=value
             value = "-";
@@ -82,4 +84,60 @@ function dot() {
     }
     value += temp;
     document.getElementById("number").innerText = value;
+}
+function plus() {
+    if (value != "") {
+        if(operation == "") {
+            firstOperand = parseInt(value);
+            document.getElementById("previous").innerText += value + "+"
+            value ="";
+            operation ="plus";
+        } else if (operation == "plus") {
+            secondOperand = parseInt(value);
+            document.getElementById("previous").innerText += value + "+"
+            value = firstOperand + secondOperand;
+            document.getElementById("number").innerText = value;
+            firstOperand = value;
+            value = ""
+            secondOperand = 0;
+            operation = "plus";
+        } else if (operation == "sub") {
+            secondOperand = parseInt(value);
+            document.getElementById("previous").innerText += value + "+"
+            value = firstOperand - secondOperand;
+            document.getElementById("number").innerText = value;
+            firstOperand = value;
+            value = ""
+            secondOperand = 0;
+            operation = "plus";
+        }
+    }
+}
+function sub() {
+    if (value != "") {
+        if(operation == "") {
+            firstOperand = parseInt(value);
+            document.getElementById("previous").innerText += value + "-"
+            value ="";
+            operation ="sub";
+        } else if (operation == "sub") {
+            secondOperand = parseInt(value);
+            document.getElementById("previous").innerText += value + "-"
+            value = firstOperand - secondOperand;
+            document.getElementById("number").innerText = value;
+            firstOperand = value;
+            value = ""
+            secondOperand = 0;
+            operation = "sub";
+        } else if (operation == "plus") {
+            secondOperand = parseInt(value);
+            document.getElementById("previous").innerText += value + "-"
+            value = firstOperand + secondOperand;
+            document.getElementById("number").innerText = value;
+            firstOperand = value;
+            value = ""
+            secondOperand = 0;
+            operation = "sub";
+        }
+    }
 }
