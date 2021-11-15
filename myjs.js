@@ -51,3 +51,16 @@ function zero() {
     value += temp;
     document.getElementById("number").innerText = value;
 }
+
+function C() {
+    value="";
+    temp = 0;
+    document.getElementById("number").innerHTML= "";
+    document.getElementById("previous").innerText= "";
+}
+
+function negative() {
+    temp=-1;
+    value *= temp;
+    document.getElementById("number").innerText = value;
+}
