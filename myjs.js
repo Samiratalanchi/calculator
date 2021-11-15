@@ -270,3 +270,42 @@ function divide() {
         }
     }
 }
+function equal() {
+    if (value != "") {
+        if(operation != "") {
+            if (operation == "plus") {
+                secondOperand = parseInt(value);
+                document.getElementById("previous").innerText = ""
+                value = firstOperand + secondOperand;
+                document.getElementById("number").innerText = value;
+                firstOperand = value;
+                secondOperand = 0;
+                operation = "";
+            } else if (operation == "sub") {
+                secondOperand = parseInt(value);
+                document.getElementById("previous").innerText = ""
+                value = firstOperand - secondOperand;
+                document.getElementById("number").innerText = value;
+                firstOperand = value;
+                secondOperand = 0;
+                operation = "";
+            } if (operation == "mul") {
+                secondOperand = parseInt(value);
+                document.getElementById("previous").innerText = ""
+                value = firstOperand * secondOperand;
+                document.getElementById("number").innerText = value;
+                firstOperand = value;
+                secondOperand = 0;
+                operation = "";
+            } if (operation == "divide") {
+                secondOperand = parseInt(value);
+                document.getElementById("previous").innerText = ""
+                value = firstOperand / secondOperand;
+                document.getElementById("number").innerText = value;
+                firstOperand = value;
+                secondOperand = 0;
+                operation = "";
+            }
+        }
+    }
+}
