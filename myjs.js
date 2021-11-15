@@ -59,6 +59,7 @@ function C() {
     temp = 0;
     document.getElementById("number").innerHTML= "";
     document.getElementById("previous").innerText= "";
+    operation = ""
 }
 
 function negative() {
@@ -119,6 +120,15 @@ function plus() {
             value = ""
             secondOperand = 0;
             operation = "plus";
+        } else if (operation == "divide") {
+            secondOperand = parseInt(value);
+            document.getElementById("previous").innerText += value + "+"
+            value = firstOperand / secondOperand;
+            document.getElementById("number").innerText = value;
+            firstOperand = value;
+            value = ""
+            secondOperand = 0;
+            operation = "plus";
         }
     }
 }
@@ -151,6 +161,15 @@ function sub() {
             secondOperand = parseInt(value);
             document.getElementById("previous").innerText += value + "-"
             value = firstOperand * secondOperand;
+            document.getElementById("number").innerText = value;
+            firstOperand = value;
+            value = ""
+            secondOperand = 0;
+            operation = "sub";
+        } else if (operation == "divide") {
+            secondOperand = parseInt(value);
+            document.getElementById("previous").innerText += value + "-"
+            value = firstOperand / secondOperand;
             document.getElementById("number").innerText = value;
             firstOperand = value;
             value = ""
@@ -193,6 +212,61 @@ function mul() {
             value = ""
             secondOperand = 0;
             operation = "mul";
+        } else if (operation == "divide") {
+            secondOperand = parseInt(value);
+            document.getElementById("previous").innerText += value + "*"
+            value = firstOperand / secondOperand;
+            document.getElementById("number").innerText = value;
+            firstOperand = value;
+            value = ""
+            secondOperand = 0;
+            operation = "mul";
+        }
+    }
+}
+function divide() {
+    if (value != "") {
+        if(operation == "") {
+            firstOperand = parseInt(value);
+            document.getElementById("previous").innerText += value + "/"
+            value ="";
+            operation ="divide";
+        } else if (operation == "divide") {
+            secondOperand = parseInt(value);
+            document.getElementById("previous").innerText += value + "/"
+            value = firstOperand / secondOperand;
+            document.getElementById("number").innerText = value;
+            firstOperand = value;
+            value = ""
+            secondOperand = 0;
+            operation = "divide";
+        } else if (operation == "mul") {
+            secondOperand = parseInt(value);
+            document.getElementById("previous").innerText += value + "/"
+            value = firstOperand * secondOperand;
+            document.getElementById("number").innerText = value;
+            firstOperand = value;
+            value = ""
+            secondOperand = 0;
+            operation = "divide";
+        } else if (operation == "sub") {
+            secondOperand = parseInt(value);
+            document.getElementById("previous").innerText += value + "/"
+            value = firstOperand - secondOperand;
+            document.getElementById("number").innerText = value;
+            firstOperand = value;
+            value = ""
+            secondOperand = 0;
+            operation = "divide";
+        } else if (operation == "plus") {
+            secondOperand = parseInt(value);
+            document.getElementById("previous").innerText += value + "/"
+            value = firstOperand + secondOperand;
+            document.getElementById("number").innerText = value;
+            firstOperand = value;
+            value = ""
+            secondOperand = 0;
+            operation = "divide";
         }
     }
 }
