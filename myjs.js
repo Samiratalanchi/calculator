@@ -86,6 +86,14 @@ function dot() {
     value += temp;
     document.getElementById("number").innerText = value;
 }
+function percent() {
+    if(value !=0) {
+        temp = parseInt(value);
+        value = (temp/100).toString();
+        console.log(value);
+        document.getElementById("number").innerText = value;
+    }
+}
 function plus() {
     if (value != "") {
         if(operation == "") {
@@ -291,12 +299,16 @@ function equal() {
                 operation = "";
             } if (operation == "mul") {
                 secondOperand = parseInt(value);
+                console.log("first" + firstOperand);
+                console.log("second" +secondOperand);
                 document.getElementById("previous").innerText = ""
                 value = firstOperand * secondOperand;
+                console.log(value);
                 document.getElementById("number").innerText = value;
                 firstOperand = value;
                 secondOperand = 0;
                 operation = "";
+                console.log(value);
             } if (operation == "divide") {
                 secondOperand = parseInt(value);
                 document.getElementById("previous").innerText = ""
