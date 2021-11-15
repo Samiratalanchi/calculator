@@ -1,6 +1,7 @@
 <head>
     <title>Calculator</title>
     <link rel="stylesheet" href="./main.css">
+    <script src="./myjs.js"></script>
 </head>
 <body>
     <div id="container">
@@ -12,7 +13,7 @@
             <div id="grid">
                 <div class="gridItem">
                     <div class="calButton">
-                        <div class="button top">
+                        <div class="button top" onclick="C()">
                             C
                         </div>
                     </div>
@@ -40,21 +41,21 @@
                 </div>
                 <div class="gridItem">
                     <div class="calButton">
-                        <div class="button">
+                        <div class="button" onclick="seven()">
                             7
                         </div>
                     </div>
                 </div>
                 <div class="gridItem">
                     <div class="calButton">
-                        <div class="button">
+                        <div class="button" onclick="eight()">
                             8
                         </div>
                     </div>
                 </div>
                 <div class="gridItem">
                     <div class="calButton">
-                        <div class="button">
+                        <div class="button" onclick="nine()">
                             9
                         </div>
                     </div>
@@ -68,21 +69,21 @@
                 </div>
                 <div class="gridItem">
                     <div class="calButton">
-                        <div class="button">
+                        <div class="button" onclick="four()">
                             4
                         </div>
                     </div>
                 </div>
                 <div class="gridItem">
                     <div class="calButton">
-                        <div class="button">
+                        <div class="button" onclick="five()">
                             5
                         </div>
                     </div>
                 </div>
                 <div class="gridItem">
                     <div class="calButton">
-                        <div class="button">
+                        <div class="button" onclick="six()">
                             6
                         </div>
                     </div>
@@ -96,21 +97,21 @@
                 </div>
                 <div class="gridItem">
                     <div class="calButton">
-                        <div class="button">
+                        <div class="button" onclick="one()">
                             1
                         </div>
                     </div>
                 </div>
                 <div class="gridItem">
                     <div class="calButton">
-                        <div class="button">
+                        <div class="button" onclick="two()">
                             2
                         </div>
                     </div>
                 </div>
                 <div class="gridItem">
                     <div class="calButton">
-                        <div class="button">
+                        <div class="button" onclick="three()">
                             3
                         </div>
                     </div>
@@ -124,7 +125,7 @@
                 </div>
                 <div class="gridItem zero">
                     <div class="calButton">
-                        <div class="button buttonZero">
+                        <div class="button buttonZero" onclick="zero()">
                             0
                         </div>
                     </div>
