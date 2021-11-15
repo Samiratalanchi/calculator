@@ -2,59 +2,70 @@ var value = "";
 var temp = 0
 var firstOperand,secondOperand ;
 var operation ="";
-// var snd = new Audio("./static/Click.mp3")
+var snd = new Audio("./static/Click.mov")
 function one() {
+    snd.play();
     temp=1;
     value += temp;
     document.getElementById("number").innerText = value;
 }
 function two() {
+    snd.play();
     temp=2;
     value += temp;
     document.getElementById("number").innerText = value;
 }
 function three() {
+    snd.play();
     temp=3;
     value += temp;
     document.getElementById("number").innerText = value;
 }
 function four() {
+    snd.play();
     temp=4;
     value += temp;
     document.getElementById("number").innerText = value;
 }
 function five() {
+    snd.play();
     temp=5;
     value += temp;
     document.getElementById("number").innerText = value;
 }
 function six() {
+    snd.play();
     temp=6;
     value += temp;
     document.getElementById("number").innerText = value;
 }
 function seven() {
+    snd.play();
     temp=7;
     value += temp;
     document.getElementById("number").innerText = value;
 }
 function eight() {
+    snd.play();
     temp=8;
     value += temp;
     document.getElementById("number").innerText = value;
 }
 function nine() {
+    snd.play();
     temp=9;
     value += temp;
     document.getElementById("number").innerText = value;
 }
 function zero() {
+    snd.play();
     temp=0;
     value += temp;
     document.getElementById("number").innerText = value;
 }
 
 function C() {
+    snd.play();
     value="";
     temp = 0;
     document.getElementById("number").innerHTML= "";
@@ -63,25 +74,17 @@ function C() {
 }
 
 function negative() {
+    snd.play();
     if(value!="") {
         temp = -1;
         temp *= parseFloat(value);
         value = temp.toString();
         document.getElementById("number").innerText = value;
-        // if(value >0) {
-        //     temp=value
-        //     value = "-";
-        //     value += temp;
-        //     document.getElementById("number").innerText = value;
-        // } else {
-        //     temp = value.slice(1);
-        //     value = temp;
-        //     document.getElementById("number").innerText = value;
-        // }
     }
 }
 
 function dot() {
+    snd.play();
     if(value = 0){
         temp="0.";
     } else {
@@ -91,6 +94,7 @@ function dot() {
     document.getElementById("number").innerText = value;
 }
 function percent() {
+    snd.play();
     if(value !=0) {
         temp = parseFloat(value);
         value = (temp/100).toString();
@@ -98,6 +102,7 @@ function percent() {
     }
 }
 function plus() {
+    snd.play();
     if (value != "") {
         if(operation == "") {
             firstOperand = parseFloat(value);
@@ -149,6 +154,7 @@ function plus() {
     }
 }
 function sub() {
+    snd.play();
     if (value != "") {
         if(operation == "") {
             firstOperand = parseFloat(value);
@@ -200,6 +206,7 @@ function sub() {
     }
 }
 function mul() {
+    snd.play();
     if (value != "") {
         if(operation == "") {
             firstOperand = parseFloat(value);
@@ -251,6 +258,7 @@ function mul() {
     }
 }
 function divide() {
+    snd.play();
     if (value != "") {
         if(operation == "") {
             firstOperand = parseFloat(value);
@@ -302,6 +310,7 @@ function divide() {
     }
 }
 function equal() {
+    snd.play();
     if (value != "") {
         if(operation != "") {
             if (operation == "plus") {
