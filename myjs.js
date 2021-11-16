@@ -2,7 +2,8 @@ var value = "";
 var temp = 0
 var firstOperand,secondOperand ;
 var operation ="";
-var snd = new Audio("./static/Click.mov")
+var snd = new Audio("./static/Click.mov");
+
 function one() {
     snd.play();
     temp=1;
@@ -66,11 +67,17 @@ function zero() {
 
 function C() {
     snd.play();
-    value="";
-    temp = 0;
-    document.getElementById("number").innerHTML= "";
-    document.getElementById("previous").innerText= "";
-    operation = ""
+    if(value != "") {
+        value="";
+        temp = 0;
+        document.getElementById("number").innerHTML= "";
+    } else {
+        value="";
+        temp = 0;
+        document.getElementById("number").innerHTML= "";
+        document.getElementById("previous").innerText= "";
+        operation = ""
+    }
 }
 
 function negative() {
@@ -347,5 +354,58 @@ function equal() {
                 operation = "";
             }
         }
+    }
+}
+window.onkeypress = function(event) {
+    if (event.key == "1"){
+        one();
+    }
+    if (event.key == "2"){
+        two();
+    }
+    if (event.key == "3"){
+        three();
+    }
+    if (event.key == "4"){
+        four();
+    }
+    if (event.key == "5"){
+        five();
+    }
+    if (event.key == "6"){
+        six();
+    }
+    if (event.key == "7"){
+        seven();
+    }
+    if (event.key == "8"){
+        eight();
+    }
+    if (event.key == "9"){
+        nine();
+    }
+    if (event.key == "0"){
+        zero();
+    }
+    if (event.key == "."){
+        dot();
+    }
+    if (event.key == "*") {
+        mul();
+    }
+    if (event.key == "/") {
+        divide();
+    }
+    if (event.key == "+") {
+        plus();
+    }
+    if (event.key == "-") {
+        sub();
+    }
+    if (event.key == "%") {
+        percent();
+    }
+    if (event.key == "=") {
+        equal();
     }
 }

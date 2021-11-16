@@ -1,8 +1,7 @@
 :root {
     --gray: #474747;
     --lightgray: #ababac;
-    --final: #fd9722;
-    
+    --final: #fd9722; 
 }
 body {
     background-color: var(--gray);
